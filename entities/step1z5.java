@@ -1,7 +1,7 @@
 package homework.homework.entities;
 import java.util.Scanner;
 
-public class basicCalculation {
+public class step1z5 {
     public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
