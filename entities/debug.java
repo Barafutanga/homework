@@ -1,24 +1,27 @@
 package homework.homework.entities;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class debug {
     public static void main(String[] args) {
-        
     Scanner sc = new Scanner (System.in);
 
-    System.out.println("HELLO, YOU ARE IN SUPER-NUMBERINTERVAL, HERE HOW IT WORKS:\nTHE COMPUTER WILL GENERATE 2 RANDOM NUMBERS, AND YOU\nGENERATE A 3TH NUMBER");
-    System.out.print("X: ");
-    int x = 2;
-    int a = (int) Math.floor(Math.random() * 99);
-    int b = (int) Math.floor(Math.random() * 99);
-    do {
-        a = (int) Math.floor(Math.random() * 99);
-    } while (a > b);
+    int a, b, c;
+    a = sc.nextInt();
+    b = sc.nextInt();
+    c = sc.nextInt();
+
+    int [] ar = new int[] {a, b, c}; 
+
+    Arrays.sort(ar);
+
+    for (int i = 0; i < ar.length; i++) {
+        System.out.println(ar[i]);
+    }
+        
     
-    System.out.printf("A: %d | B: %d | C: %d", a, x, b);
 
-
-
+   
     sc.close();
     }
     
