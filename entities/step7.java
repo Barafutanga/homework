@@ -1,4 +1,4 @@
-package homework.homework.entities;
+package ProgramLogic.entities;
 import java.util.Scanner;
 
 public class step7 {

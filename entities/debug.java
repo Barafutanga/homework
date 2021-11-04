@@ -1,29 +1,29 @@
-package homework.homework.entities;
-import java.util.Scanner;
-import java.util.Arrays;
+package ProgramLogic.entities;
 
 public class debug {
-    public static void main(String[] args) {
-    Scanner sc = new Scanner (System.in);
+		
+    public String name;
+    public int id;
+    public double grossSalary, taxSalary;
 
-    int a, b, c;
-    a = sc.nextInt();
-    b = sc.nextInt();
-    c = sc.nextInt();
-
-    int [] ar = new int[] {a, b, c}; 
-
-    Arrays.sort(ar);
-
-    for (int i = 0; i < ar.length; i++) {
-        System.out.println(ar[i]);
-    }
-        
-    
-
-   
-    sc.close();
+    public int idGen () {
+        return id = (int) Math.floor (Math.random() * 9999);
     }
     
-
+    public double liquidSalary() {
+        return grossSalary - taxSalary;
+    }
+    public void increasedSalary(double increasePercetage) {
+        grossSalary += (grossSalary - taxSalary)    * increasePercetage / 100;
+    }
+ 
+    public String toString() {
+        return "Name: " + name
+            + " | ID: "
+            + idGen()
+            + " | Liquid salary $"
+            + liquidSalary();
+         
+    }   
+	
 }
